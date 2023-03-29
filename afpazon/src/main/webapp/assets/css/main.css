@@ -2,6 +2,7 @@
     Variables
 ========================================*/
 /* caroussel */
+
 .col-center {
 	margin: 0 auto;
 	float: none !important;
@@ -110,6 +111,8 @@
 .carousel-indicators li.active {
 	background: #8080ff;
 }
+/*  fin de carrouselle */
+
 /*======================================
     Normalize CSS
 ========================================*/

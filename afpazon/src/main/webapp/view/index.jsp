@@ -9,7 +9,6 @@
 				<ol class="carousel-indicators">
 					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 					<li data-target="#myCarousel" data-slide-to="1"></li>
-					<!-- <li data-target="#myCarousel" data-slide-to="2"></li> -->
 				</ol>
 				<!-- Wrapper for carousel items -->
 				<div class="carousel-inner">
@@ -111,48 +110,8 @@
 							</div>
 						</div>
 					</div>
-					<!-- <div class="item">
-					<div class="row">
-						<div class="col-sm-4">
-							<div class="thumb-wrapper">
-								<div class="img-box">
-									<img src="/examples/images/cities/rio-de-janeiro.png" class="img-responsive" alt="">
-								</div>
-								<div class="thumb-content">
-									<h4>Rio De Janeiro</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam.</p>
-									<a href="#" class="btn btn-primary">More <i class="fa fa-angle-right"></i></a>
-								</div>						
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="thumb-wrapper">
-								<div class="img-box">
-									<img src="/examples/images/cities/giza.png" class="img-responsive" alt="">
-								</div>
-								<div class="thumb-content">
-									<h4>Giza</h4>
-									<p>Vivamus fermentum in arcu in aliquam. Quisque aliqua porta odio in fringilla vivamus.</p>
-									<a href="#" class="btn btn-primary">More <i class="fa fa-angle-right"></i></a>
-								</div>						
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="thumb-wrapper">
-								<div class="img-box">
-									<img src="/examples/images/cities/sydney.png" class="img-responsive" alt="">
-								</div>
-								<div class="thumb-content">
-									<h4>Sydney</h4>
-									<p>Convallis eget pretium eu, bibendum non leo. Proin susc ipit purus adipiscing dolor.</p>
-									<a href="#" class="btn btn-primary">More <i class="fa fa-angle-right"></i></a>
-								</div>						
-							</div>					
-						</div>
-					</div>
-				</div> -->
-				</div>
 
+				</div>
 				<!-- Carousel controls -->
 				<a class="carousel-control left" data-bsdata-bs-interval="200"
 					data-bs-pause="hover" href="#myCarousel" data-slide="prev"> <i
@@ -164,10 +123,10 @@
 		</div>
 	</div>
 </div>
-<!-- End Footer Middle -->
+<!-- Carousel END -->
+
 <div>
 	<h2>JE SUIS HOME</h2>
-
 
 
 	<section class="trending-product section" style="margin-top: 12px;">
@@ -262,16 +221,13 @@
 					<!-- End Single Product -->
 				</div>
 
-					<div class="row">
-						<div class="col-12">
-							<div class="section-title">
-								<h2>Pomotion in Product</h2>
-								<!-- <p>There are many variations of passages of Lorem Ipsum
-									available, but the majority have suffered alteration in some
-									form.</p> -->
-							</div>
+				<div class="row">
+					<div class="col-12">
+						<div class="section-title">
+							<h2>Pomotion in Product</h2>
 						</div>
 					</div>
+				</div>
 				<div class="col-lg-3 col-md-6 col-12">
 					<!-- Start Single Product -->
 					<div class="single-product">
@@ -395,6 +351,98 @@
 				</div>
 			</div>
 		</div>
+		<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+    <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+    <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="https://placehold.co/600x400/png" class="card-img-top" alt="">
+            <div class="card-body">
+              <h5 class="card-title">Produit 1</h5>
+              <p class="card-text">Description du produit 1</p>
+              <a href="#" class="btn btn-primary">Acheter</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="https://placehold.co/600x400/png" class="card-img-top" alt="">
+            <div class="card-body">
+              <h5 class="card-title">Produit 2</h5>
+              <p class="card-text">Description du produit 2</p>
+              <a href="#" class="btn btn-primary">Acheter</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="https://placehold.co/600x400/png" class="card-img-top" alt="">
+            <div class="card-body">
+              <h5 class="card-title">Produit 3</h5>
+              <p class="card-text">Description du produit 3</p>
+              <a href="#" class="btn btn-primary">Acheter</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="https://placehold.co/600x400/png" class="card-img-top" alt="">
+            <div class="card-body">
+              <h5 class="card-title">Produit 4</h5>
+              <p class="card-text">Description du produit 4</p>
+              <a href="#" class="btn btn-primary">Acheter</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="https://placehold.co/600x400/png" class="card-img-top" alt="">
+            <div class="card-body">
+              <h5 class="card-title">Produit 5</h5>
+              <p class="card-text">Description du produit 5</p>
+              <a href="#" class="btn btn-primary">Acheter</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="https://placehold.co/">
+
+
+    <div class="carousel-item">
+      <img src="image3.jpg" alt="Image 3">
+      <div class="carousel-caption">
+        <h3>Titre de l'image 3</h3>
+        <p>Description de l'image 3</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Précédent</span>
+  </a>
+  <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Suivant</span>
+  </a>
+</div>
+		
 	</section>
 	<!-- End Trending Product Area -->
 </div>
