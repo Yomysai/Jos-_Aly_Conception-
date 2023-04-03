@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -10,8 +9,7 @@
 <title>AfpaZon.</title>
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="shortcut icon" type="image/x-icon"
-	href="assets/images/favicon.svg" />
+<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg" />
 
 <!-- ========================= CSS Carousel ========================= -->
 <link rel="stylesheet" href="assets/carrousel/css/owl.carousel.min.css">
@@ -23,18 +21,24 @@
 <script src="assets/carrousel/js/popper.carousel.js"></script>
 
 <!-- ========================= CSS here ========================= -->
-<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-<link rel="stylesheet" href="assets/css/LineIcons.3.0.css" />
-<link rel="stylesheet" href="assets/css/tiny-slider.css" />
-<link rel="stylesheet" href="assets/css/glightbox.min.css" />
-<link rel="stylesheet" href="assets/css/main.css" />
+<link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="./assets/css/LineIcons.3.0.css" />
+<link rel="stylesheet" href="./assets/css/tiny-slider.css" />
+<link rel="stylesheet" href="./assets/css/glightbox.min.css" />
+<link rel="stylesheet" href="./assets/css/main.css" />
+<link rel="stylesheet" href="./assets/css/backOffice.css" />
+<link rel="stylesheet" href="./assets/css/datatables.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 <script defer src="assets/js/bootstrap.min.js"></script>
 <script defer src="assets/js/tiny-slider.js"></script>
 <script defer src="assets/js/glightbox.min.js"></script>
+<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="./assets/js/datatables.min.js"></script>
 <script defer src="assets/js/main.js"></script>
 </head>
 
 <body>
+<c:if test="${currentUser.role.role == 'Client' }">
 	<!--[if lte IE 9]>
       <p class="browserupgrade">
         You are using an <strong>outdated</strong> browser. Please
@@ -52,7 +56,6 @@
 		</div>
 	</div>
 	<!-- /End Preloader -->
-
 	<!-- Start Header Area -->
 	<header class="header navbar-area">
 		<!-- Start Topbar -->
@@ -121,12 +124,13 @@
 							<div class="navbar-cart">
 								<div class="wishlist"></div>
 								<div class="cart-items">
-									<a href="javascript:void(0)" class="main-btn"> <i
-										class="lni lni-cart"></i> <span class="total-items">2</span></a>
+									<a href="javascript:void(0)" class="main-btn"> 
+                    <i class="lni lni-cart"></i> <span class="total-items">2</span>
+                  </a>
 									<!-- Shopping Item -->
 									<div class="shopping-item">
 										<div class="dropdown-cart-header">
-											<span>2 Items</span> <a href="cart.html">View Cart</a>
+											<span>2 Items</span> <a href="cart">View Cart</a>
 										</div>
 										<ul class="shopping-list">
 											<li><a href="javascript:void(0)" class="remove"
@@ -159,7 +163,10 @@
 										</ul>
 										<div class="bottom">
 											<div class="total">
-												<span>Total</span> <span class="total-amount">$599.94</span>
+												<span>Total</span> <span class="total-amount">$134.00</span>
+											</div>
+											<div class="button">
+												<a href="cart" class="btn animate">Checkout</a>
 											</div>
 											<a href="checkout.html" class="btn animate">Checkout</a>
 										</div>
@@ -213,9 +220,9 @@
 								id="navbarSupportedContent">
 								<ul id="nav" class="navbar-nav ms-auto">
 									<li class="nav-item"><a href="index.html"
-										aria-label="Toggle navigation">Promotion</a></li>
+										aria-label="Toggle navigation">Promotions</a></li>
 									<li class="nav-item"><a href="index.html"
-										aria-label="Toggle navigation">Nouveauter</a></li>
+										aria-label="Toggle navigation">Nouveautés</a></li>
 									<li class="nav-item"><a href="contact.html"
 										aria-label="Toggle navigation">Contactez nous</a></li>
 								</ul>
@@ -243,3 +250,112 @@
 		<!-- End Header Bottom -->
 	</header>
 	<!-- End Header Area -->
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="exampleModalLabel">Se connecter</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<form method="post" action="register" name="login">
+					<div class="modal-body">
+						<div class="mb-3 ">
+							<label class="form-label">Email</label> <input type="email" class="form-control" placeholder="Email" id="email" name="email">
+							<p class="errortitre error"></p>
+						</div>
+						<div class="mb-3 ">
+							<label class="form-label">Password</label> <input type="password" class="form-control" placeholder="Password" id="password" name="password">
+							<p class="errorminplayer error"></p>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary"
+							data-bs-dismiss="modal">Fermer</button>
+						<button type="submit" class="btn btn-primary">Se
+							connecter</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Modal FIN -->
+	
+	<!-- Header Backoffice -->
+	</c:if>
+	<c:if test="${currentUser.role.role == 'Admin' }">
+	<!--start Navbar -->
+	<nav class="navbar navbar-expand-lg bg-body-tertiary"
+		style="background: #F113DB">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#"></a>
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link active"
+							aria-current="page" href="dashboard">
+							<img alt="dashboard image" src="assets/images/back_office/logo.png" width="55">
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<img alt="" src="assets/images/back_office/Catalogue.png" width="60">
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="stockManager"> 
+							<img alt="" src="assets/images/back_office/Stock.png" width="45">
+						</a>
+					</li>
+				</ul>
+				<a class=" d-flex nav-link" href="#"> <img alt=""
+					src="assets/images/back_office/logBack.png" width="60">
+				</a>
+			</div>
+		</div>
+	</nav>
+<!--end Header backoffice -->
+
+	</c:if>
+	<c:if test="${currentUser.role.role == 'Admin' }">
+	<!--start Navbar -->
+	<nav class="navbar navbar-expand-lg bg-body-tertiary"
+		style="background: #F113DB">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#"></a>
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="dashboard"><img alt="dashboard image"
+							src="assets/images/back_office/logo.png" width="55"></a></li>
+					<li class="nav-item"><a class="nav-link" href="#"><img
+							alt="" src="assets/images/back_office/Catalogue.png" width="60"></a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="#"> <img
+							alt="" src="assets/images/back_office/Stock.png" width="45">
+					</a></li>
+				</ul>
+				<a class=" d-flex nav-link" href="#"> <img alt=""
+					src="assets/images/back_office/logBack.png" width="60">
+				</a>
+			</div>
+		</div>
+	</nav>
+<!--end Navbar -->
+	</c:if>
